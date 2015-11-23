@@ -1,1 +1,22 @@
 # warcmock
+Yet another HTTP proxy for serving WARC files.
+
+Build the web application archive (war) with Maven:
+
+   mvn clean package tomcat7:run
+
+You can configure the location of the WARC file in ./src/main/resources/config.properties:
+
+<configuration>
+    <warc>
+        <path>/Users/resc01/tmp/archive.warc.gz</path>
+    </warc>
+    <statistics>
+         <uri>http://localhost:8080/statistics</uri>
+    </statistics>
+</configuration>
+
+Configure your HTTP user agent to use as proxy the hostname
+and port on which the servlet container runs (e.g., http://localhost:8080/).
+
+   export http_proxy="http://localhost:8080/"
