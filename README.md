@@ -2,13 +2,14 @@
 Yet another HTTP proxy for serving WARC files.
 
 Build and run the web application archive (war) with Maven:
-
-    mvn clean package tomcat7:run
+```
+mvn clean package tomcat7:run
+```
 
 Shutdown the web application with Maven:
-
-    mvn tomcat7:shutdown
-
+```
+mvn tomcat7:shutdown
+```
 
 You can configure the location of the WARC file in ./src/main/resources/config.properties:
 
@@ -25,5 +26,8 @@ You can configure the location of the WARC file in ./src/main/resources/config.p
 
 Configure your HTTP user agent to use as proxy the hostname
 and port on which the servlet container runs (e.g., http://localhost:8080/).
-
-    export http_proxy="http://localhost:8080/"
+```
+export http_proxy="http://localhost:8080/"
+```
+## Acknowledgements
+This work has been supported by the [German Ministry for Education and Research (BMBF)](http://www.bmbf.de/en/index.html) (FZK 01IMI3001 J) as part of the [ARVIDA](http://www.arvida.de/) project.
